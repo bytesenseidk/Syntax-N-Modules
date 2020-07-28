@@ -1,7 +1,5 @@
 # Code Snippits:
 __________________________
-- Download Sound files.  
-- Download Video files.  
-- Specify folder for downloads.  
-- Set audio quality.  
-- Set audio format.  
+- Phone: Analyze phone numbers.  
+- Unzip: Unzip zip-files.  
+- url_shorten: Shorten url link adresses
