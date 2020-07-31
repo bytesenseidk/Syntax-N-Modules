@@ -1,6 +1,12 @@
 # Code Snippits:
 __________________________
-- Phone: Analyze phone numbers.  
-- Unzip: Unzip zip-files.  
-- url_shorten: Shorten url link adresses
-- secure_pdf: Create password protected PDF files.
+- phone.py:  
+    Analyze phone numbers.  
+- unzip.py:  
+    Unzip zip-files.  
+- url_shorten.py:  
+    Shorten url adresses
+- secure_pdf.py:  
+    Create password protected PDF-files.
+- online_info.py:  
+    Get your host-name, ip-address, download & upload speed.
