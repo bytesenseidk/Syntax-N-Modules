@@ -10,3 +10,5 @@ __________________________
     Create password protected PDF-files.
 - ### online_info.py  
     Get your host-name, ip-address, download & upload speed.
+- ### zipper.py  
+    Compress folders with sub-content.  
