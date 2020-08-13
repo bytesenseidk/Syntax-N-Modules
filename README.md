@@ -12,3 +12,5 @@ __________________________
     Get your host-name, ip-address, download & upload speed.
 - ### zipper.py  
     Compress folders with sub-content.  
+- ### PrintNice.py  
+    Ways to display printed text in different formats & grids.  
