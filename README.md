@@ -14,3 +14,5 @@ __________________________
     Compress folders with sub-content.  
 - ### PrintNice.py  
     Ways to display printed text in different formats & grids.  
+- ### Network.py  
+    Get download & upload speed.  
