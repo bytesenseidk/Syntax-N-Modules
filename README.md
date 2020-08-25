@@ -20,3 +20,5 @@ __________________________
     Takes in a text file, and converts into a PDF.  
 - ### Screenshot.py  
     Simply takes a screenshot, and save it to the Pictures folder.  
+- ### Hash_Generator.py  
+    Generate a SHA1 and a MD5 hash key.  
