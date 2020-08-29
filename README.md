@@ -24,3 +24,5 @@ __________________________
     Generate a SHA1 and a MD5 hash key.  
 - ### pictureToPdF.py
     Convert a picture file into a PDF file.
+- ### Instagram_notifier.py
+    Get notified of current, and last current instagram status with x min. interval. 
