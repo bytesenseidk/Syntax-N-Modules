@@ -26,3 +26,7 @@ __________________________
     Convert a picture file into a PDF file.
 - ### Instagram_notifier.py
     Get notified of current, and last current instagram status with x min. interval. 
+- ### song_downloader.py
+    Download youtube songs in Mp3-Format, just enter url to video, and the mp3 will be saved to your Downloads folder.  
+- ### Simple_Translator.py
+    Very simple translator, type a word or sentence, and it will translate it to whatever language you'd like, just change the default "ru" to whatever language code you wish. 
