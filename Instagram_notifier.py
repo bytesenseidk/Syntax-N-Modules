@@ -11,7 +11,7 @@ class Instagram_updater(object):
     def __init__(self, username):
         self.username = username
         self.current = "None"
-        self.last = "None"
+        self.raise_count = 0
         self.first = "None"
         
 
@@ -20,10 +20,15 @@ class Instagram_updater(object):
         r = requests.get(url).text
         start = '"edge_followed_by":{"count":'
         end = '},"followed_by_viewer"'
-        self.last = self.current
         self.current = str(r[r.find(start)+len(start):r.rfind(end)])
-    
-    
+        try:
+            if int(self.current) > self.raise_count:
+                self.raise_count += int(self.current) - int(self.first)
+            elif int(self.current) < self.raise_count:
+                self.raise_count -= abs(int(self.current) - int(self.first))
+        except:
+            pass
+        
     def main(self, notification_rate):
         parser = ToastNotifier()
         start_time = strftime("%H:%M:%S", time.localtime())
@@ -32,18 +37,18 @@ class Instagram_updater(object):
         # will catch type error the first and second iteration
         while True:
             try:
-                data = str(f"Current Amount:\t{int(self.current):,}\n"
-                           f"Last Amount:\t{int(self.last):,}\n"
-                           f"Time Started:\t{start_time}\n"
-                           f"Started With:\t{int(self.first):,}")
+                data = str(f"Current Check:\t{int(self.current):,} Followers.\n"
+                           f"Raise Count:\t{int(self.raise_count):,} Followers.\n"
+                           f"Script Executed :\t{start_time}\n"
+                           f"Start Amount:\t{int(self.first):,} Followers.")
                 parser.show_toast(self.username, data, icon_path="logo.ico", 
                                                 duration=notification_rate)
                 self.followers()
             except:
-                data = str(f"Current Amount:\t{int(self.current):,}\n"
-                           f"Last Amount:\t{self.last}\n"
-                           f"Time Started:\t{start_time}\n"
-                           f"Started With:\t{int(self.first):,}")
+                data = str(f"Current Check:\t{int(self.current):,} Followers.\n"
+                           f"Raise Count:\t{self.raise_count} Followers.\n"
+                           f"Script Executed:\t{start_time}\n"
+                           f"Start Amount:\t{int(self.first):,} Followers.")
                 parser.show_toast(self.username, data, icon_path="logo.ico", 
                                             duration=notification_rate)
                 self.followers()
