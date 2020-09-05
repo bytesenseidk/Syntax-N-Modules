@@ -34,3 +34,5 @@ __________________________
     Convert a link or some kind of string into a QR-Code.  
 - ### BAR_Gen.py
     Convert a 12'digit number into a BAR-Code.  
+- ### keylogger_simple.py
+    Very basic keylogger.  
