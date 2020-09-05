@@ -1,3 +1,6 @@
+""" Todo: 
+add threads
+"""
 import os
 import time
 import requests
@@ -19,14 +22,14 @@ class Instagram_updater(object):
         end = '},"followed_by_viewer"'
         self.current = str(r[r.find(start)+len(start):r.rfind(end)])
         try:
-            if int(self.current - self.first) > self.raise_count:
-                self.raise_count = int(self.current - self.first)
-            elif int(self.current - self.first) < self.raise_count:
-                self.raise_count = int(self.current - self.first)
+            if int(self.current) - int(self.first) > self.raise_count:
+                self.raise_count = int(self.current) - int(self.first)
+            elif int(self.current) - int(self.first) < self.raise_count:
+                self.raise_count = int(self.current) - int(self.first)
             else:
-                self.raise_count = 0
+                pass
         except:
-            self.raise_count = 0
+            pass
         
     def main(self, notification_rate):
         parser = ToastNotifier()
