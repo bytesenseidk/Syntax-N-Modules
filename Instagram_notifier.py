@@ -70,3 +70,4 @@ if __name__ == "__main__":
         notify_rate = 5 * 60
     account = Instagram_updater(username)
     account.main(notify_rate)
+
