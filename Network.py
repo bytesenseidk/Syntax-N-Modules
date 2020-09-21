@@ -1,21 +1,28 @@
+import psutil
 import speedtest
 from tabulate import tabulate
 
-class Network(object):
+class Network_Details(object):
     def __init__(self):
-        self.parser = speedtest.Speedtest()
+        self.parser = psutil.net_if_addrs()
+        self.speed_parser = speedtest.Speedtest()
+        self.interfaces = self.interface()[0]
 
-    def data(self):
-        down = str(f"{round(self.parser.download() / 1_000_000, 2)} Mbps")
-        up = str(f"{round(self.parser.upload() / 1_000_000, 2)} Mbps")
-        return [["Interface", "Download", "Upload"],
-                ["TP-LINK_1234", down, up]]
+    def interface(self):
+        interfaces = []
+        for interface_name, _ in self.parser.items():
+            interfaces.append(str(interface_name))
+        return interfaces
     
     def __repr__(self):
-        speed = self.data()
-        return tabulate(speed, headers="firstrow", tablefmt="fancy_grid")
-    
+        down = str(f"{round(self.speed_parser.download() / 1_000_000, 2)} Mbps")
+        up = str(f"{round(self.speed_parser.upload() / 1_000_000, 2)} Mbps")
+        interface = self.interfaces
+        data = {"Interface:" : [interface],
+                "Download:" : [down],
+                "Upload:" : [up]}
+        table = tabulate(data, headers="keys", tablefmt="pretty")
+        return table
 
 if __name__ == "__main__":
-    print(Network())
-
+    print(Network_Details())
