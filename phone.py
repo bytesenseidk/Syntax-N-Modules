@@ -13,3 +13,4 @@ if __name__ == "__main__":
     number = input("Enter number: ")
     print(number_check(number))
 
+
