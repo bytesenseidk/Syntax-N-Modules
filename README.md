@@ -1,5 +1,19 @@
 # Code Snippits:
 __________________________
+- ### Alarm.py  
+    Simple alarm with beep sound and notification.  
+- ### BarGenerator.py  
+    Generate a BAR code.  
+- ### Bubble_sort.py  
+    A simple bubblesort algorithm.  
+- ### Cool_terminal_stuff.py  
+    Different ways to make the CLI look cool.
+- ### Hash_Generator.py  
+    Generates different hash-values for given files.  
+- ### Instagram_Database.py  
+    Keep track of Instagram followers saving the result in a database.  
+- ### Instagram_ProfilePicture.py  
+    Download the profile picture from an Instagram account by account name.  
 - ### phone.py  
     Analyze phone numbers.  
 - ### unzip.py  
