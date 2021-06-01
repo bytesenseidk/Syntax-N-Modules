@@ -10,21 +10,36 @@ def zip_me(path):
     """ Save zipfile to the target folder path """
     os.chdir(rel_path)
 
-    parse = ZipFile(f"{folder_name}.zip", "w")
+    zip_file = ZipFile(f"{folder_name}.zip", "w")
 
     for root, dirs, files in os.walk(folder_name, topdown=False):
         """ Files in sub-folders """
         for name in files:
             file = os.path.join(root, name)
-            parse.write(file)
+            zip_file.write(file)
 
         """ Sub-folders in target folder """
         for name in dirs:
             folders = os.path.join(root, name)
-            parse.write(folders)
-    parse.close()
+            zip_file.write(folders)
+    zip_file.close()
         
 if __name__ == "__main__":
     path = input(r"Path to target folder: ")
     zip_me(path)
     
+
+# import os
+# import zipfile
+    
+# def zipdir(path, ziph):
+#     # ziph is zipfile handle
+#     for root, dirs, files in os.walk(path):
+#         for file in files:
+#             ziph.write(os.path.join(root, file), 
+#                        os.path.relpath(os.path.join(root, file), 
+#                                        os.path.join(path, '..')))
+      
+# zipf = zipfile.ZipFile('Python.zip', 'w', zipfile.ZIP_DEFLATED)
+# zipdir('tmp/', zipf)
+# zipf.close()
