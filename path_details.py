@@ -1,5 +1,3 @@
-
-
 class Path_Worker(object):
     def __init__(self, file_path):
         self.file = file_path
