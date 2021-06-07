@@ -14,8 +14,9 @@ class Path_Worker(object):
             f"File Extension: {self.file_ext}")
 
 if __name__ == "__main__":
-    print("Drop a file here: ")
-    file = input(r"  >> ").strip('"')
-    print(Path_Worker(file))
+    # print("Drop a file here: ")
+    # file = input(r"  >> ").strip('"')
+    file = r"C:\Users\Anonymous\Documents\GitHub\Instagram-Posted-Sources\path_details.py"
+    print(Path_Worker(file) + "\n\n")
     
     
