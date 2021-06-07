@@ -29,4 +29,3 @@ if __name__ == "__main__":
     print(f"Standard Conditional: {standard_conditional(7)}")
     print(f"Ternary Conditional:  {ternary_conditional(7)}")
     print(f"String Conditional:   {string_conditional('Hello')}")
-
