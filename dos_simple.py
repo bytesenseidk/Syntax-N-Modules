@@ -1,9 +1,8 @@
 import socket
 import threading
-import keyboard
 
 class DenialOfService(object):
-    def __init__(self, target="192.168.8.1", port=80, ip_mask="182.21.20.32"):
+    def __init__(self, target="192.168.0.1", port=80, ip_mask="182.21.20.32"):
         self.target = target
         self.port = port
         self.ip_mask = ip_mask
