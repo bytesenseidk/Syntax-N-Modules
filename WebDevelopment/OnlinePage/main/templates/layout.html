@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <meta charset="utf-8">
+    {% if title %}
+        <title>genius-web - {{ title }}</title>
+    {% else %}
+        <title>genius-web</title>
+    {% endif %}
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+          <a href="/home"><img src="static/pictures/logo.png" alt="logo"></a>
+      </div>
+      <nav>
+          <ul class="nav-links">
+              <li><a class="nav-link" href="/test">Experiments</a></li>
+              <li><a class="nav-link" href="/backinbiz">Test Page</a></li>
+              <li><a class="nav-link" href="#">Profile</a></li>
+              <li><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+      </nav>
+      <div class="links">
+        <a href="https://github.com/rosenkilde95"><img  src="static/pictures/github.png" alt="github" /></a>
+        <a href="https://www.instagram.com/python_genius/?hl=da"><img  src="static/pictures/instagram.png" alt="instagram" /></a>
+      </div>
+  </header>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

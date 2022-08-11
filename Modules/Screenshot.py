@@ -1,12 +1,14 @@
+import os
 import pyautogui
-from os import chdir, path
-# Change directory to your desktop
-chdir(path.join(path.expanduser('~'), 'Desktop'))
 
-# Create an instance for the screenshot 
-# function in the pyautogui module
-instance = pyautogui.screenshot()
-instance.save("Screenshot.png")
-print("Screenshot saved to the desktop!")
+def screenshot():
+    # Save screenshot to picture folder
+    save_path = os.path.join(os.path.expanduser("~"), "Pictures")
+    shot = pyautogui.screenshot()
+    shot.save(f"{save_path}\\python_screenshot.png")
+    return print(f"\nScreenshot taken, and saved to {save_path}")
+
+if __name__ == "__main__":
+    screenshot()
 
 

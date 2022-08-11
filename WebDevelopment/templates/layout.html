@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+        <title>Test Site - {{ title }}</title>
+    {% else %}
+        <title>Test Site</title>
+    {% endif %}
+  </head>
+  <body>
+    <ul>
+      <li><a href="/test">Test Page</a></li>
+    <ul>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
