@@ -1,2 +1,2 @@
-# Python-Tricks
-Diffferent tips and tricks for clean and effective python programming
+# Syntax & Modules
+Diffferent syntax and module examples for Python
