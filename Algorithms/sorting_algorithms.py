@@ -3,7 +3,8 @@ class Sort_Algorithms(object):
         self.sort_me = [9, 2, 1, 4, 7, 6, 5, 3, 8]
 
     def __str__(self):
-        return str("\t[ Object Oriented Sorting Algorithms ]\n"
+        return str(f"\t[ Object Oriented Sorting Algorithms ]\n" 
+            f"Unsorted List:  {self.sort_me}\n"
             f"Bubble Sort:    {self.bubble_sort(self.sort_me)}\tBig-O: O(n^2)\n"
             f"Selection Sort: {self.selection_sort(self.sort_me)}\tBig-O: O(n^2)\n"
             f"Insertion Sort: {self.insertion_sort(self.sort_me)}\tBig-O: O(n^2)\n"
