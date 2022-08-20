@@ -1,10 +1,10 @@
-import sqlite3
-
 """ Singleton Design Pattern:
 Restricts the instantiation of a class to one 'single' instance.
 Example: We have a database, and want to ensure only a single instance is making changes at a time,
 this ensures that the data doesn't get currupted by multiple instances changing the value simultaneously.
 """
+
+import sqlite3
 
 class Singleton(type):
     _instances = {}
