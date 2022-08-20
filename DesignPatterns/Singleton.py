@@ -42,6 +42,6 @@ if __name__ == "__main__":
     false_instance_1 = FalseDesignPattern()
     true_instance_0 = TrueDesignPattern()
     true_instance_1 = TrueDesignPattern()
-    print(f"Without Singleton: is {False if false_instance_0 == false_instance_1 else True}\n",
-         f"With Singleton:    is {True if true_instance_0 == true_instance_1 else False}\n")
+    print(f"Without Singleton: {false_instance_0 == false_instance_1}")
+    print(f"With Singleton:    {true_instance_0 == true_instance_1}")
 
