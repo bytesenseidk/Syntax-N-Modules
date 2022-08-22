@@ -28,7 +28,7 @@ def question_constructor():
         if question == "exit":
             break
         print('\n')
-        question = f"howdoi {question}" # + flag
+        question = f"howdoi {question}"
         os.system(question)
         
         
@@ -39,8 +39,8 @@ if __name__ == "__main__":
         question = input("\nEnter your question: ")
         if question != "exit":
             print('\n')
-            question = f"howdoi {question}" # + flag
+            question = f"howdoi {question}"
             os.system(question)
             continue
         break
-        
+
