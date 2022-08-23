@@ -66,5 +66,5 @@ if __name__ == "__main__":
         "inequality": vector_0.triangle_inequality(vector_1)
     }
     for key in methods:
-        print(key, ": \t", str(methods[key]))
+        print(f"{key}:  \t {str(methods[key])}")
 
