@@ -7,7 +7,7 @@ from main import app
 def home():
     return render_template("home.html", title="Home Page")
 
-@app.route("/backinbiz")
+@app.route("/second")
 def testpage():
     return render_template("backinbiz.html", title="Second Test Page")
 
