@@ -1,2 +1,2 @@
 # Syntax & Modules
-Diffferent syntax and module examples for Python
+Different syntax and module examples for Python
