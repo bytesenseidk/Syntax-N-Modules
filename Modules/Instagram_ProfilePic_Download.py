@@ -7,7 +7,5 @@ def download(username):
     return instance.download_profile(username, profile_pic_only=True)
 
 if __name__ == "__main__":
-    print("Enter Username:")
-    username = input(r"  >> ")
-    download(username)
+    download("python_genius")
 
