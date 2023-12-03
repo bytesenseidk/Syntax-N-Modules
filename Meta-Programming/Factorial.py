@@ -7,9 +7,8 @@ class Factorial(object):
         
     def __mul__(self, other):
         # Returns a new instance of the Factorial class with updated values
-        result = Factorial(0)
-        result.value = self.value * other.value
-        return result
+        self.value *= other
+        return self
     
     def __repr__(self):
         # Provices a string representation of the object
