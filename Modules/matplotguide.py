@@ -3,7 +3,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 plt.style.use("ggplot")
 
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+months = ["January", "February", "March", "April", "May", "June", "July", 
+          "August", "September", "October", "November", "December"]
 
 year_2016 = [1.17, 1.35, 1.3, 1.09, 0.93, 0.76, 0.83, 0.98, 0.87, 0.89, 0.93, 0.81]
 year_2015 = [0.81, 0.86, 0.9, 0.74, 0.78, 0.78, 0.71, 0.78 , 0.81, 1.06, 1.04, 1.1]
