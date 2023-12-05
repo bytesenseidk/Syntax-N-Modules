@@ -1,26 +1,21 @@
+# Average temperature rise each month since 1880
+import numpy as np
 from matplotlib import pyplot as plt
-
 plt.style.use("ggplot")
 
-x = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-y1 = [2849, 3200, 3675, 3932, 4320,
-         4600, 5231, 5492, 5731, 5874, 6375]
+year_2016 = [1.17, 1.35, 1.3, 1.09, 0.93, 0.76, 0.83, 0.98, 0.87, 0.89, 0.93, 0.81]
+year_2015 = [0.81, 0.86, 0.9, 0.74, 0.78, 0.78, 0.71, 0.78 , 0.81, 1.06, 1.04, 1.1]
+year_2014 = [0.73, 0.51, 0.77, 0.78, 0.87, 0.66, 0.57, 0.82, 0.9, 0.85, 0.67, 0.79]
+year_2013 = [0.68, 0.55, 0.66, 0.52, 0.61, 0.65, 0.59, 0.66, 0.78, 0.69, 0.81, 0.67]
 
-y2 = [3781, 4351, 4682, 4929, 5343,
-            5637, 6237, 6667, 6874, 6874, 7458]
+for i, year in enumerate([year_2016, year_2015, year_2014, year_2013]):
+    plt.plot(months, year, color=np.random.rand(3,), linestyle="-", label=str(int(2016 - i)))
 
-y3 = [4537, 4887, 5385, 5728, 6301,
-            6599, 7000, 7080, 7149, 7537, 8364]
-
-
-plt.plot(x, y1, color="k", linestyle="--", marker="o", label="Line 1")
-plt.plot(x, y2, color="b", marker="o", linewidth=3, label="Line 2")
-plt.plot(x, y3, color="r", marker="x", linewidth=3, label="Line 3")
-
-plt.xlabel("X-Angle")
-plt.ylabel("Y-Angle")
-plt.title("Matplotlib Guide")
+plt.xlabel("Months")
+plt.ylabel("Mean Temperature Rise")
+plt.title("Matplotlib Mean Temperature Illustration")
 plt.grid(True)
 plt.legend()
 plt.show()
