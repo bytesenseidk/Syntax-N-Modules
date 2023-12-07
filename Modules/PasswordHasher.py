@@ -1,25 +1,32 @@
-from argon2 import PasswordHasher
+from argon2 import PasswordHasher # pip install argon2-cffi
 
 class HashingDemo(object):
-    def __init__(self):
+    def __init__(self, password, comparer):
+        self.password = password
+        self.comparer = comparer
         self.hasher = PasswordHasher()
-        self.hashed_password_0 = self.hasher.hash("password") # Both passwords are the same
-        self.hashed_password_1 = self.hasher.hash("password") # Yet hashed to different values
-        self.match_0 = self.hasher.verify(self.hashed_password_0, "password")
+        self.hashed_password = self.hasher.hash(password)
+    
+    def hash_password(self, password):
+        return self.hasher.hash(password)
+    
+    def verify_password(self, hashed_pass, password):
         try:
-            # This will raise an exception instead of returning False
-            self.match_1 = self.hasher.verify(self.hashed_password_1, "wrong")
+            if self.hasher.verify(hashed_pass, password):
+                return True
         except:
-            self.match_1 = False
+            return False
         
-    def __str__(self):
-        results = ''
-        results += f"1'st Hashed Password: {self.hashed_password_0}\n"
-        results += f"2'nd Hashed Password: {self.hashed_password_1}\n"
-        results += f"Does 'password' Match {self.hashed_password_0}: {self.match_0}\n"
-        results += f"Does 'wrong' Match {self.hashed_password_1}: {self.match_1}"
-        return results
+    def __repr__(self):
+        return str(self.verify_password(self.hashed_password, self.comparer))
 
 if __name__ == "__main__":
-    print(HashingDemo())
+    pass_0 = "Password"
+    pass_1 = "12345678"
+    true_ins = HashingDemo(pass_0, "Password")
+    false_ins = HashingDemo(pass_1, "Password")
+    true_hash = true_ins.hashed_password.split(',p=')[-1]
+    false_hash = false_ins.hashed_password.split(',p=')[-1]
+    print(f"Instance_0: {pass_0} = {true_hash} = {true_ins}\nInstance_1: {pass_1} = {false_hash} = {false_ins}")
     
+
