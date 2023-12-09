@@ -1,9 +1,10 @@
 import goslate
 
 def translator(sentance, language="en"):
-    gs = goslate.Goslate()
-    result = gs.translate(sentance, language)
-    return result
+    return goslate.Goslate().translate(sentance, language)
+    
 
-print(translator("Følg python_genius på Instagram!", "ru"))
+if __name__ == "__main__":
+    translation = translator("Follow python_genius on Instagram!", "hi")
+    print(translation)
 
