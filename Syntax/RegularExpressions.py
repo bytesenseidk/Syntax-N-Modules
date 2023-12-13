@@ -1,4 +1,4 @@
-""" Regular Expression Symbol Overview:
+r""" Regular Expression Symbol Overview:
 .       - Any Character Except New Line          []      - Matches Characters in brackets
 \d      - Digit (0-9)                            [^ ]    - Matches Characters NOT in brackets
 \D      - Not a Digit (0-9)                      |       - Either Or
@@ -17,7 +17,6 @@ search_string = """
     some_email15@mail.com     anoter.email@gmail.org     Jane_Doe99@college.tech.edu
     834-998-5415              123-456-7894               999-999-9999
     """
-
 all_mails = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-xA-Z0-9-.]+")
 specific_mail = re.compile(r"[a-z_.+-]+@[a-zA-Z0-9-]+\.[a-xA-Z0-9-.]+")
 all_phonenumbers = re.compile(r"\d{3}.\d{3}.\d{4}")

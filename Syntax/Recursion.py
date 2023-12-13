@@ -19,5 +19,3 @@ if __name__ == "__main__":
     print("Example function:        ", recursion(5))
     print("Greatest Common Divisor: ", gcd(98, 56))
     print("Least Common Multiple:   ", lcm(15, 20))
-
-
