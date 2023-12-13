@@ -1,5 +1,5 @@
 # Syntax & Modules
-Python syntax and use and explainations of dirrenrent module
+Python syntax & use of different modules with explanations
 
 # Description
 ## Algorithms
