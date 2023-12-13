@@ -21,3 +21,4 @@ if __name__ == "__main__":
     custom_ip = geocoder.ip("8.8.8.8")
     locate = IpLocator(custom_ip)
     print(locate)
+
