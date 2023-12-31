@@ -1,20 +1,16 @@
 import turtle
+import colorsys
 
-turtle.pensize(5)
-turtle.pencolor("red")
-turtle.color("red")
-turtle.speed(2)
+draw = turtle.Turtle()
+draw.speed(0.5)
+screen = turtle.Screen()
+screen.bgcolor('black')
+color_change = 256
+pos = 0
 
-def drawing():
-    for line in range(5):
-        turtle.left(144)
-        turtle.forward(200)
-
-    turtle.penup()
-    turtle.goto(-270, -120)
-    turtle.write("python_genius", font=('Arial', 40, 'normal'))
-
-if __name__ == "__main__":
-    drawing()
-    turtle.mainloop()
-    
+for i in range(512):
+    color = colorsys.hsv_to_rgb(pos, 1, 1)
+	   pos = pos + 1 / color_change
+	   draw.color(color)
+	   draw.forward(i ** 1.5)
+	   draw.left(145)
