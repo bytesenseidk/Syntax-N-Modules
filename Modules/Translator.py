@@ -1,5 +1,6 @@
 import goslate
 
+
 def translator(sentance, language="en"):
     return goslate.Goslate().translate(sentance, language)
     
