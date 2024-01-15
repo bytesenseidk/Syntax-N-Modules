@@ -11,5 +11,5 @@ def print_cool(text):
     return str(cool_text.renderText(text))
 
 if __name__ == "__main__":
-    print(print_cool("python_genius"))
+    print(print_cool("Byte Sensei"))
 
