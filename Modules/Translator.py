@@ -5,6 +5,6 @@ def translator(sentance, language="en"):
     
 
 if __name__ == "__main__":
-    translation = translator("Follow python_genius on Instagram!", "hi")
+    translation = translator("Follow bytesenseidk on Instagram!", "hi")
     print(translation)
 
