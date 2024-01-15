@@ -1,4 +1,4 @@
-string = "python_genius"
+string = "bytesenseidk"
 
 print(f"""
 Origional:       {string}
@@ -11,3 +11,4 @@ Last slice:      {string[-6:]}
 Every n'th:      {string[::2]}
 Reverse:         {string[::-1]}
 """)
+
