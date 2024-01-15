@@ -55,3 +55,4 @@ if __name__ == "__main__":
     if sys.exit():
         database.cursor.close()
         database.connection.close()
+ 
